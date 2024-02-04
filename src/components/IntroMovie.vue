@@ -5,7 +5,7 @@
     </div>
     <div class="movie">
       <video
-        poster="/wedding/img/video-thumbnail.jpg"
+        poster="/img/video-thumbnail.jpg"
         :autoplay="getOS() !== 'iOS'"
         controls
       >
