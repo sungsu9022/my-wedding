@@ -6,7 +6,7 @@
     </div>
     <div :class="{isHide : '_hidden'}" ref="disqusWrap">
       <Disqus
-          shortname="sungsu-parks-tech-blog"
+          shortname="my-wedding-dsxdcsfgsj"
           :pageConfig="pageConfig"
       />
     </div>
@@ -35,7 +35,7 @@ export default {
       pageConfig: {
         title: '방명록',
         language: "ko",
-        category_id: 'sports'
+        url: "https://sungsu9022.github.io/my-wedding/"
       },
     }
   },
