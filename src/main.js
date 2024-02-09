@@ -1,19 +1,17 @@
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import VScrollLock from 'v-scroll-lock'
-import App from './App.vue'
-import Divider from './components/Divider.vue'
-import Button from './components/Button.vue'
+import NewApp from './NewApp.vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import 'semantic-ui-css/semantic.min.css';
 import VueClipboard from 'vue-clipboard2'
+
 
 new AOS.init()
 
-const vueApp = createApp(App)
+const vueApp = createApp(NewApp)
 
 vueApp.mount('#app')
 vueApp.use(VScrollLock)
 vueApp.use(VueClipboard)
-vueApp.use(Divider)
-vueApp.use(Button)
 vueApp.config.productionTip = false

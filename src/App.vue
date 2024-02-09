@@ -3,20 +3,20 @@
 <template>
   <div id="kyong">
     <FlowerRain />
-    <IntroMovie />
-    <Live />
+    <Divider />
+    <TopArea />
+    <Divider />
+    <MyAudioPlayer />
     <Divider />
     <Gallery />
+
     <Divider />
     <Celebrate @click="handleClick" :presents="presents" />
     <Divider />
     <Map />
     <Divider />
-    <Funding />
+
     <Divider />
-    <div style="display: none">
-      <Credit />
-    </div>
     <BottomSheet
       :is-open="isOpen"
       @close="handleClose"
@@ -27,26 +27,24 @@
 </template>
 
 <script>
-import IntroMovie from "./components/IntroMovie.vue";
-import Live from "./components/Live.vue";
+
+import TopArea from "./components/TopArea.vue";
 import Gallery from "./components/Gallery.vue";
-import Funding from "./components/Funding.vue";
 import Celebrate from "./components/Celebrate.vue";
 import Map from "./components/Map.vue";
-import FlowerRain from "./components/FlowerRain.vue";
+import FlowerRain from "./common/FlowerRain.vue";
 import BottomSheet from "./components/BottomSheet.vue";
-// import firebase from "firebase";
+import MyAudioPlayer from "./new-components/MyAudioPlayer.vue";
 
 export default {
   name: "App",
   components: {
-    IntroMovie,
-    Live,
+    TopArea,
     Gallery,
-    Funding,
     Celebrate,
     FlowerRain,
     BottomSheet,
+    MyAudioPlayer,
     Map,
   },
   data() {
@@ -157,7 +155,6 @@ section,
 summary,
 time,
 mark,
-audio,
 video {
   margin: 0;
   padding: 0;

@@ -7,7 +7,7 @@
     <div></div>
     <div class="gallery-container" ref="gal">
       <div class="gallery-inner">
-        <div class="gallery-item" v-for="n in 13" :key="n">
+        <div class="gallery-item" v-for="n in itemSize" :key="n">
           <div class="image">
             <img
               :src="`/gallery/${n - 1}.jpg`"
@@ -38,6 +38,7 @@ export default {
     return {
       scrollX: 0,
       width: 320,
+      itemSize: 3,
     };
   },
   mounted() {
