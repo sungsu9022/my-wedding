@@ -66,13 +66,4 @@ export default {
     margin-bottom: 30px;
   }
 }
-
-#disqus_thread iframe #footer {
-  display: none;
-}
-
-._hidden {
-  visibility: hidden;
-}
-
 </style>
