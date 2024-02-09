@@ -4,7 +4,7 @@ module.exports = defineConfig({
 })
 
 module.exports = {
-  // publicPath: '/wedding/',
+  publicPath: '/my-wedding/',
   css: {
     loaderOptions: {
       scss: {
