@@ -1,6 +1,6 @@
 <template>
   <div class="map">
-    <img src="~@/assets/images/bunny.png" class="bunny" />
+    <img src="~@/assets/images/cat.png" class="bunny" />
     <div class="description">
       오시는 길
     </div>
