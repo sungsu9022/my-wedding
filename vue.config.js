@@ -1,9 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  transpileDependencies: true
-})
-
-module.exports = {
+  transpileDependencies: true,
   publicPath: '/my-wedding/',
   css: {
     loaderOptions: {
@@ -12,4 +9,4 @@ module.exports = {
       },
     },
   },
-};
+})
