@@ -5,7 +5,7 @@
       오시는 길
     </div>
 
-    <img class="ui centered large image" :src="mapImageUrl">
+    <img class="ui centered large image" src="~@/assets/images/map.jpg">
 
     <div class="cover">
       <div class="navi-apps">
@@ -43,7 +43,6 @@ export default {
   name: "map-area",
   data() {
     return {
-      mapImageUrl: "~@/assets/images/map.jpg",
       locationName: "노블발렌티 대치점",
       tmapUrl: "",
       kakaoTaxiUrl: "",
