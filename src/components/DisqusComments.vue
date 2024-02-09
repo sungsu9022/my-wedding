@@ -4,11 +4,13 @@
     <div class="description">
       방명록
     </div>
-    <div :class="{isHide : '_hidden'}" ref="disqusWrap">
+    <div ref="disqusWrap">
       <Disqus
           shortname="my-wedding-dsxdcsfgsj"
           :pageConfig="pageConfig"
       />
+      <!--  TODO    -->
+      <div class="_hidden"></div>
     </div>
 
   </div>
@@ -25,13 +27,9 @@ export default {
     Disqus,
   },
   computed: {
-    isHide() {
-      return !this.isShow
-    }
   },
   data() {
     return {
-      isShow: false,
       pageConfig: {
         title: '방명록',
         language: "ko",
@@ -65,5 +63,15 @@ export default {
     letter-spacing: 6px;
     margin-bottom: 30px;
   }
+}
+
+._hidden {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  z-index: 99999;
+  background-color: white;
+  /* background: red; */
+  bottom: -1968px;
 }
 </style>

@@ -15,5 +15,5 @@ const vueApp = createApp(App)
 vueApp.mount('#app')
 vueApp.use(VScrollLock)
 vueApp.use(VueClipboard)
-vueApp.use(VueDisqus, { shortname: 'my-wedding-dsxdcsfgsj'})
+vueApp.use(VueDisqus)
 vueApp.config.productionTip = false
