@@ -9,7 +9,10 @@
     <Divider/>
     <NewMap/>
     <Divider/>
+    <DisqusComments/>
+    <Divider/>
     <MyAudioPlayer />
+
   </div>
 
 </template>
@@ -22,6 +25,7 @@ import NewTopArea from "./new-components/NewTopArea.vue";
 import NewGallery from "./new-components/NewGallery.vue";
 import Divider from "./components/Divider.vue";
 import NewMap from "./new-components/NewMap.vue";
+import DisqusComments from "./new-components/DisqusComments.vue"
 
 export default {
   name: "NewApp",
@@ -32,6 +36,7 @@ export default {
     NewGallery,
     Divider,
     NewMap,
+    DisqusComments,
   },
   data() {
     return {
