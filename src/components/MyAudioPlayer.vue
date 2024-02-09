@@ -6,7 +6,7 @@
       BGM
     </button>
     <audio ref="audio">
-      <source :src="audioFilUrl" type="audio/mpeg">
+      <source src="~@/assets/audio/bgm.mp3" type="audio/mpeg">
       BMG 지원불가
     </audio>
   </div>
@@ -23,7 +23,6 @@ export default {
   },
   data() {
     return {
-      audioFilUrl: "/bgm.mp3",
       isPlaying: false,
       autoPlayStartSeconds: 1
     }

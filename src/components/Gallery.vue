@@ -10,7 +10,7 @@
         <div class="gallery-item" v-for="n in itemSize" :key="n">
           <div class="image">
             <img
-              :src="`/gallery/${n - 1}.jpg`"
+              :src="`~@/assets/gallery/${n - 1}.jpg`"
               :style="{
                 transform: `translateX(${(((scrollX - (n - 1) * 250) / 4.8 +
                   50 >

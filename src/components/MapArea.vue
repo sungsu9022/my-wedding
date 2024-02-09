@@ -1,6 +1,6 @@
 <template>
   <div class="map">
-    <img src="../assets/images/bunny.png" class="bunny" />
+    <img src="~@/assets/images/bunny.png" class="bunny" />
     <div class="description">
       오시는 길
     </div>
@@ -43,7 +43,7 @@ export default {
   name: "map-area",
   data() {
     return {
-      mapImageUrl: "/img/new/map.jpg",
+      mapImageUrl: "~@/assets/images/map.jpg",
       locationName: "노블발렌티 대치점",
       tmapUrl: "",
       kakaoTaxiUrl: "",
