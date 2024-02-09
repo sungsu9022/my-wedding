@@ -1,6 +1,6 @@
 <template>
   <div class="gallery">
-    <img src="~@/assets/images/bunny.png" class="bunny" />
+    <img src="../assets/images/bunny.png" class="bunny" />
     <div class="description">
       photo gallery
     </div>
@@ -33,12 +33,12 @@
 
 <script>
 export default {
-  name: "my-gallery",
+  name: "new-my-gallery",
   data() {
     return {
       scrollX: 0,
       width: 320,
-      itemSize: 3,
+      itemSize: 11,
     };
   },
   mounted() {

@@ -1,6 +1,6 @@
 <template>
   <div class="live">
-    <img src="~@/assets/images/hands.png" class="hands" />
+    <img src="../assets/images/hands.png" class="hands" />
     <div>
       <p class = "header">
         "우리 손 잡을까요?"<br />
@@ -13,7 +13,7 @@
         조용하지만 기쁨이 가득한 결혼 소식을<br />
         이렇게 알려드립니다.
       </p>
-      <p class = "header">
+      <p class="location">
         24년 6월 8일 토요일<br />
         오후 5시<br />
         노블발렌티 대치점<br />
@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: "top-area",
+  name: "new-top-area",
   methods: {
   },
 };
@@ -52,6 +52,10 @@ export default {
     }
     &.header {
       color: #295238;
+    }
+    &.location {
+      color: #295238;
+      font-size: 15px;
     }
     &:last-child {
       margin-bottom: 40px;
