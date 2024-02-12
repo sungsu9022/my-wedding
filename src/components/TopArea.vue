@@ -80,7 +80,7 @@ export default {
 .mcard-intro .wod{letter-spacing:2px;font-size:16px}
 .mcard-intro .photo-wrap{padding:0 24px}
 .mcard-intro .photo{line-height:0}
-.mcard-intro .photo img{width:100%}
+.mcard-intro .photo img{width:100%; margin-left: 5px; margin-right: 5px;}
 .mcard-intro .photo.border_00{border:1.2rem solid #fff;margin:0 .3rem;box-shadow:1px 2px 8px 0 rgba(54,54,54,.15)}
 .mcard-intro .bottom{margin-top:30px;font-size:.9rem}
 .mcard-intro .name{display:flex;align-items:center;justify-content:center;gap:16px;font-size:0;margin-bottom:12px;letter-spacing:1px;color:#000}

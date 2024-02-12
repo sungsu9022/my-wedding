@@ -6,7 +6,9 @@
     <InvitationArea />
     <MyGallery />
     <Divider/>
-    <MapArea/>
+<!--    <MapArea/>-->
+    <GoogleMapArea/>
+    <Divider/>
     <Divider/>
     <BankAccountArea/>
     <Divider/>
@@ -22,10 +24,13 @@ import AudioPlayer from "./components/MyAudioPlayer.vue";
 import TopArea from "./components/TopArea.vue";
 import InvitationArea from "./components/InvitationArea.vue";
 import Divider from "./components/Divider.vue";
-import MapArea from "./components/MapArea.vue";
+
 import DisqusComments from "./components/DisqusComments.vue"
 import BankAccountArea from "@/components/BackAccountArea.vue";
 import MyGallery from "@/components/MyGallery.vue";
+// import MapArea from "./components/MapArea.vue";
+// import NaverMapArea from "@/components/NaverMapArea.vue";
+import GoogleMapArea from "@/components/GoogleMapArea.vue";
 
 export default {
   name: "app",
@@ -37,8 +42,10 @@ export default {
     TopArea,
     InvitationArea,
     Divider,
-    MapArea,
     DisqusComments,
+    // MapArea,
+    // NaverMapArea,
+    GoogleMapArea,
   },
   data() {
     return {

@@ -9,7 +9,8 @@
           shortname="my-wedding-dsxdcsfgsj"
           :pageConfig="pageConfig"
       />
-      <div class="_hidden"></div>
+<!--      최종 완료 후 조정 -->
+<!--      <div class="_hidden"></div>-->
     </div>
 
   </div>

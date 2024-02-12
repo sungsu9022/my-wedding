@@ -40,9 +40,7 @@ export default {
   },
   mounted() {
     document.addEventListener("DOMContentLoaded", () => {
-      console.log("DOMContentLoaded")
       setTimeout(() => {
-        console.log("setTimeout")
         this.playAndPause()
       }, this.autoPlayStartTime);
     });
