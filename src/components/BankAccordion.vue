@@ -87,25 +87,7 @@
           <tr>
             <td class="left aligned">
                 <span>
-                  <span class="bank">기업은행 </span>
-                  <span>{{ this.bankAccount.femaleFather }}</span>
-                </span>
-              <br />
-              <span>신부 혼주 - 김동균</span>
-            </td>
-            <td class="right aligned">
-              <div class="ui buttons">
-                <button class="ui mini icon button" @click="copyBankAccount($event, this.bankAccount.femaleFather)">
-                  <i class="copy icon"></i>
-                  복사
-                </button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td class="left aligned">
-                <span>
-                  <span class="bank">기업은행 </span>
+                  <span class="bank">농협 </span>
                   <span>{{ this.bankAccount.femaleMother }}</span>
                 </span>
               <br />
@@ -168,8 +150,8 @@ export default {
         male : "99270132461",
         maleMother: "59220201669901",
         female: "53902218301017",
-        femaleMother: "53902218301017",
-        femaleFather: "53902218301017",
+        femaleMother: "21105152369181",
+        femaleFather: "21105152369181",
       },
       kakaoPay: {
         male : "https://qr.kakaopay.com/FUI1VLcBZ",
