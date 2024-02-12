@@ -108,7 +108,7 @@
     </div>
 
 
-    <div class="bottom center ui toast-container" v-show="showCopyCompleteModal">
+    <div class="bottom center ui toast-container _toast" v-show="showCopyCompleteModal">
       <div class="floating toast-box" style="text-align: left">
         <div role="alert" class="ui toast compact _toast_color" style="opacity: 1;">
           <i class="copy icon" style="visibility: visible;"></i>
@@ -197,6 +197,10 @@ export default {
   line-height: 2.5;
 }
 
+._toast {
+  bottom: 30px!important;
+}
+
 ._toast_color {
   background-color: #4d7846!important;
   opacity: 0.9!important;
@@ -208,13 +212,6 @@ export default {
     padding:0;
     font-size:13px;
   }
-}
-
-._fixed_center {
-  bottom: 20px;
-  position: fixed;
-  text-align: center;
-  z-index: 9999;
 }
 
 </style>
