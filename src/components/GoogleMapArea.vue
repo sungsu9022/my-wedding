@@ -7,11 +7,14 @@
 
 <!--    <naver-maps :width="600" :height="400" :mapOptions="mapOptions"></naver-maps>-->
 
-    <iframe
-        :src="googleMapSrc"
-        width="600" height="450" style="border:0;" allowFullScreen="" loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade">
-    </iframe>
+
+      <iframe
+          class="_google_map_iframe"
+          :src="googleMapSrc"
+          allowFullScreen="" loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade">
+      </iframe>
+
 
     <div class="cover">
       <div class="navi-apps">
@@ -89,6 +92,15 @@ export default {
   font-size: 12px;
   letter-spacing: 6px;
   margin-bottom: 30px;
+}
+
+._google_map_iframe {
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 0;
+  width: 80%;
+  min-height: 310px;
+  min-width: 390px;
 }
 
 .navi-apps {

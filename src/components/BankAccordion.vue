@@ -193,6 +193,10 @@ export default {
   padding-right: 50px;
 }
 
+.bank {
+  line-height: 2.5;
+}
+
 @media (max-width:340px){
   .content {
     padding:0;
