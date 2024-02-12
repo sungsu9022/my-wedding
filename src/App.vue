@@ -7,6 +7,8 @@
     <Divider/>
     <MapArea/>
     <Divider/>
+    <BankAccountArea/>
+    <Divider/>
     <DisqusComments/>
     <Divider/>
     <AudioPlayer />
@@ -22,10 +24,12 @@ import Gallery from "./components/Gallery.vue";
 import Divider from "./components/Divider.vue";
 import MapArea from "./components/MapArea.vue";
 import DisqusComments from "./components/DisqusComments.vue"
+import BankAccountArea from "@/components/BackAccountArea.vue";
 
 export default {
   name: "app",
   components: {
+    BankAccountArea,
     FlowerRain,
     AudioPlayer,
     TopArea,
