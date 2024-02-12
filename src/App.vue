@@ -9,7 +9,6 @@
 <!--    <MapArea/>-->
     <GoogleMapArea/>
     <Divider/>
-    <Divider/>
     <BankAccountArea/>
     <Divider/>
     <DisqusComments/>
