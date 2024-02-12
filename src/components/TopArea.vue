@@ -87,7 +87,7 @@ export default {
 .mcard-intro .name>div{display:inline-block;text-align:right;font-size:18px;vertical-align:middle}
 .mcard-intro .name>div.groom{text-align:right}
 .mcard-intro .name>div.divider{position:relative;top:.5px;display:inline-block;content:"";width:1px;height:1.1rem;background:#000;opacity:.85}
-.mcard-intro .name>div.divider-and{text-align:center;font-size:.9rem}
+.mcard-intro .name>div.divider-and{text-align:center;font-size:18px;}
 .mcard-intro .name>div.bride{text-align:left}
 .mcard-intro .datetime{line-height:1.8rem;font-size: 15px;}
 </style>
