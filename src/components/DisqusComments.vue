@@ -9,8 +9,7 @@
           shortname="my-wedding-dsxdcsfgsj"
           :pageConfig="pageConfig"
       />
-      <!--  TODO    -->
-<!--      <div class="_hidden"></div>-->
+      <div class="_hidden"></div>
     </div>
 
   </div>
@@ -69,9 +68,46 @@ export default {
   width: 100%;
   height: 100px;
   position: absolute;
-  z-index: 99999;
+  z-index: 999;
   background-color: white;
   /* background: red; */
-  bottom: -1968px;
+  bottom: -2776px;
+}
+
+
+@media (max-width:1024px){
+  ._hidden { bottom: -2489px }
+}
+
+@media (max-width:820px){
+  ._hidden { bottom: -1970px;}
+}
+
+@media (max-width:768px){
+  ._hidden { bottom: -2092px;}
+}
+
+@media (max-width:430px){
+  ._hidden {bottom: -2110px;}
+}
+
+@media (max-width:412px){
+  ._hidden {bottom: -2101px;}
+}
+
+@media (max-width:390px){
+  ._hidden {bottom: -2140px;}
+}
+
+@media (max-width:375px){
+  ._hidden {bottom: -2293px;}
+}
+
+@media (max-width:360px) {
+  ._hidden {bottom: -2193px;}
+}
+
+@media (max-width:280px) {
+  ._hidden {bottom: -2227px;}
 }
 </style>

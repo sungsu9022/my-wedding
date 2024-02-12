@@ -10,7 +10,6 @@
     <BankAccountArea/>
     <Divider/>
     <DisqusComments/>
-    <Divider/>
     <AudioPlayer />
   </div>
 </template>
