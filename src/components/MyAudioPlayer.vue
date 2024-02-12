@@ -1,9 +1,8 @@
 <template>
-  <div class="ui labeled icon right floated buttons _fixed_right">
-    <button class="ui small button _bgm_color" @click="playAndPause">
-      <i v-show="!isPlaying" class="play icon"></i>
-      <i v-show="isPlaying" class="pause icon"></i>
-      BGM
+  <div class="_fixed_right">
+    <button class="circular ui icon button _bgm_color" @click="playAndPause">
+      <i v-show="!isPlaying" class="icon volume mute"></i>
+      <i v-show="isPlaying" class="icon volume up"></i>
     </button>
     <audio ref="audio">
       <source src="~@/assets/audio/bgm.mp3" type="audio/mpeg">
@@ -61,6 +60,8 @@ export default {
 
 ._bgm_color {
   background-color: #FFB52F!important;
+  background: none;
+  opacity: 90%;
 }
 
 </style>

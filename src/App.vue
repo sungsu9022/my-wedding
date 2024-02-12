@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div id="v-app-container">
     <FlowerRain />
     <TopArea />
     <Divider/>
-    <MyGalleryV2 />
+    <InvitationArea />
+    <MyGallery />
     <Divider/>
     <MapArea/>
     <Divider/>
@@ -19,6 +20,7 @@
 import FlowerRain from "./common/FlowerRain.vue";
 import AudioPlayer from "./components/MyAudioPlayer.vue";
 import TopArea from "./components/TopArea.vue";
+import InvitationArea from "./components/InvitationArea.vue";
 import Divider from "./components/Divider.vue";
 import MapArea from "./components/MapArea.vue";
 import DisqusComments from "./components/DisqusComments.vue"
@@ -28,12 +30,12 @@ import MyGallery from "@/components/MyGallery.vue";
 export default {
   name: "app",
   components: {
-    MyGalleryV2: MyGallery,
+    MyGallery,
     BankAccountArea,
     FlowerRain,
     AudioPlayer,
     TopArea,
-    // Gallery,
+    InvitationArea,
     Divider,
     MapArea,
     DisqusComments,
@@ -61,10 +63,16 @@ export default {
 
 <style>
 @font-face {
-  font-family: "Cafe24Oneprettynight";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff")
-    format("woff");
+  font-family: "GowunDodum";
+  src: url("assets/fonts/GowunDodum-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
+
+#v-app-container {
+  font-family: 'GowunDodum', sans-serif !important;
+  font-size: 15px;
+}
+
+
 </style>
