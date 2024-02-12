@@ -110,7 +110,7 @@
 
     <div class="bottom center ui toast-container" v-show="showCopyCompleteModal">
       <div class="floating toast-box" style="text-align: left">
-        <div role="alert" class="info ui toast compact" style="opacity: 1;">
+        <div role="alert" class="ui toast compact _toast_color" style="opacity: 1;">
           <i class="copy icon" style="visibility: visible;"></i>
           <div class="content">
             <div class="message">복사가 완료되었습니다.</div>
@@ -195,6 +195,12 @@ export default {
 
 .bank {
   line-height: 2.5;
+}
+
+._toast_color {
+  background-color: #4d7846!important;
+  opacity: 0.9!important;
+  color: white!important;
 }
 
 @media (max-width:340px){
