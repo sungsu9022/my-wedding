@@ -4,27 +4,17 @@
     <div class="description">
       photo gallery
     </div>
-    <div class="gallery-container" ref="gallery" >
-      <div class="gallery-inner">
-        <div class="gallery-item" v-for="imageNo in itemSize" :key="imageNo" @click="showViewer($event, imageNo - 1)">
-          <div class="image">
-            <img
-              :src="`/my-wedding/gallery/${imageNo - 1}.jpg`"
-              :style="{
-                transform: `translateX(${(((scrollX - (imageNo - 1) * 250) / 4.8 +
-                  50 >
-                100
-                  ? 100
-                  : (scrollX - (imageNo - 1) * 250) / 4.8 + 50 < 0
-                  ? 0
-                  : (scrollX - (imageNo - 1) * 250) / 4.8 + 50) /
-                  100) *
-                  -55}px)`,
-              }"
-            />
+    <div class="gallery-container" >
+      <div class="gallery-inner" :style="{ width : galleryInnerWidth }">
+        <Flicking :options="{ moveType: 'freeScroll', bound: true }">
+          <div class="gallery-item" v-for="(image, index) in images" :key="index" @click="showViewer($event, index)">
+            <div class="image">
+              <img :src="image"
+              />
+            </div>
+            <div class="arch"></div>
           </div>
-          <div class="arch"></div>
-        </div>
+        </Flicking>
       </div>
     </div>
   </div>
@@ -33,16 +23,21 @@
 <script>
 
 import viewerImages from "@/common/viewerImages";
+import Flicking from "@egjs/vue3-flicking";
+import "@egjs/vue3-flicking/dist/flicking.css";
 
 export default {
   name: "my-gallery",
+  components: {
+    Flicking
+  },
   data() {
     return {
-      scrollX: 0,
-      width: 320,
       itemSize: viewerImages.images.length,
       images : viewerImages.images,
-    };
+      imageWidth: "240",
+      galleryInnerWidth: (this.imageWidth * this.itemSize) + 100,
+    }
   },
   methods: {
     showViewer(e, imageNo) {
@@ -58,18 +53,6 @@ export default {
         }
       })
     }
-  },
-  mounted() {
-    const $gallery = this.$refs.gallery
-
-    $gallery.addEventListener("scroll", (event) => {
-      this.scrollX = event.target.scrollLeft;
-    });
-    this.width = Math.max(
-      document.documentElement.clientWidth || 0,
-      window.innerWidth || 0
-    );
-    $gallery.scrollLeft = 850;
   },
 };
 </script>
@@ -93,14 +76,10 @@ export default {
     margin-bottom: 30px;
   }
   .gallery-container {
-    padding-left: 50%;
-    padding-right: 50%;
-    margin-left: -22px;
-    margin-right: -22px;
     overflow-x: auto;
     .gallery-inner {
       display: flex;
-      width: 3370px;
+      width: 2500px;
       .gallery-item {
         flex: 0 0 240px;
         position: relative;

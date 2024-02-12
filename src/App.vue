@@ -3,7 +3,7 @@
     <FlowerRain />
     <TopArea />
     <Divider/>
-    <Gallery />
+    <MyGalleryV2 />
     <Divider/>
     <MapArea/>
     <Divider/>
@@ -20,20 +20,21 @@
 import FlowerRain from "./common/FlowerRain.vue";
 import AudioPlayer from "./components/MyAudioPlayer.vue";
 import TopArea from "./components/TopArea.vue";
-import Gallery from "./components/Gallery.vue";
 import Divider from "./components/Divider.vue";
 import MapArea from "./components/MapArea.vue";
 import DisqusComments from "./components/DisqusComments.vue"
 import BankAccountArea from "@/components/BackAccountArea.vue";
+import MyGallery from "@/components/MyGallery.vue";
 
 export default {
   name: "app",
   components: {
+    MyGalleryV2: MyGallery,
     BankAccountArea,
     FlowerRain,
     AudioPlayer,
     TopArea,
-    Gallery,
+    // Gallery,
     Divider,
     MapArea,
     DisqusComments,
