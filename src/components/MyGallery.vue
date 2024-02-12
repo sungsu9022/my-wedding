@@ -42,16 +42,21 @@ export default {
   methods: {
     showViewer(e, imageNo) {
       e.preventDefault()
-      this.$viewerApi({
+      const $viewer = this.$viewerApi({
         images: this.images,
         options: {
           initialViewIndex: imageNo,
+          fullscreen: true,
           toolbar: {
             prev: true,
             next: true,
+            close: () => {
+              $viewer.destroy()
+            },
           }
         }
       })
+
     }
   },
 };
