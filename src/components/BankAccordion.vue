@@ -173,7 +173,7 @@ export default {
       },
       kakaoPay: {
         male : "https://qr.kakaopay.com/FUI1VLcBZ",
-        maleMother: "https://qr.kakaopay.com/Ej803zULX",
+        female: "https://qr.kakaopay.com/Ej803zULX",
       },
       showCopyCompleteModal: false,
     };
