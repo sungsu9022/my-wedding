@@ -49,9 +49,9 @@ export default {
 </script>
 <style>
 ._fixed_right {
-  bottom: 8px;
+  bottom: 20px;
   position: fixed;
-  right: 3px;
+  right: 10px;
   text-align: right;
   z-index: 9999;
 }

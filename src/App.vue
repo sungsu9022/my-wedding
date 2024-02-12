@@ -4,9 +4,9 @@
     <TopArea />
     <Divider/>
     <InvitationArea />
+    <Divider/>
     <MyGallery />
     <Divider/>
-<!--    <MapArea/>-->
     <GoogleMapArea/>
     <Divider/>
     <BankAccountArea/>
@@ -27,8 +27,6 @@ import Divider from "./components/Divider.vue";
 import DisqusComments from "./components/DisqusComments.vue"
 import BankAccountArea from "@/components/BackAccountArea.vue";
 import MyGallery from "@/components/MyGallery.vue";
-// import MapArea from "./components/MapArea.vue";
-// import NaverMapArea from "@/components/NaverMapArea.vue";
 import GoogleMapArea from "@/components/GoogleMapArea.vue";
 
 export default {
@@ -42,8 +40,6 @@ export default {
     InvitationArea,
     Divider,
     DisqusComments,
-    // MapArea,
-    // NaverMapArea,
     GoogleMapArea,
   },
   data() {
