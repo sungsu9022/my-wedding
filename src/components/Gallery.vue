@@ -4,21 +4,20 @@
     <div class="description">
       photo gallery
     </div>
-    <div></div>
-    <div class="gallery-container" ref="gal">
+    <div class="gallery-container" ref="gallery" >
       <div class="gallery-inner">
-        <div class="gallery-item" v-for="n in itemSize" :key="n">
+        <div class="gallery-item" v-for="imageNo in itemSize" :key="imageNo" @click="showViewer($event, imageNo - 1)">
           <div class="image">
             <img
-              :src="`/my-wedding/gallery/${n - 1}.jpg`"
+              :src="`/my-wedding/gallery/${imageNo - 1}.jpg`"
               :style="{
-                transform: `translateX(${(((scrollX - (n - 1) * 250) / 4.8 +
+                transform: `translateX(${(((scrollX - (imageNo - 1) * 250) / 4.8 +
                   50 >
                 100
                   ? 100
-                  : (scrollX - (n - 1) * 250) / 4.8 + 50 < 0
+                  : (scrollX - (imageNo - 1) * 250) / 4.8 + 50 < 0
                   ? 0
-                  : (scrollX - (n - 1) * 250) / 4.8 + 50) /
+                  : (scrollX - (imageNo - 1) * 250) / 4.8 + 50) /
                   100) *
                   -55}px)`,
               }"
@@ -32,24 +31,45 @@
 </template>
 
 <script>
+
+import viewerImages from "@/common/viewerImages";
+
 export default {
-  name: "new-my-gallery",
+  name: "my-gallery",
   data() {
     return {
       scrollX: 0,
       width: 320,
-      itemSize: 11,
+      itemSize: viewerImages.images.length,
+      images : viewerImages.images,
     };
   },
+  methods: {
+    showViewer(e, imageNo) {
+      e.preventDefault()
+      this.$viewerApi({
+        images: this.images,
+        options: {
+          initialViewIndex: imageNo,
+          toolbar: {
+            prev: true,
+            next: true,
+          }
+        }
+      })
+    }
+  },
   mounted() {
-    this.$refs.gal.addEventListener("scroll", (event) => {
+    const $gallery = this.$refs.gallery
+
+    $gallery.addEventListener("scroll", (event) => {
       this.scrollX = event.target.scrollLeft;
     });
     this.width = Math.max(
       document.documentElement.clientWidth || 0,
       window.innerWidth || 0
     );
-    this.$refs.gal.scrollLeft = 850;
+    $gallery.scrollLeft = 850;
   },
 };
 </script>
