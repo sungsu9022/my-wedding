@@ -11,6 +11,7 @@ export default {
 		"my-wedding/gallery/8.jpg",
 		"my-wedding/gallery/9.jpg",
 		"my-wedding/gallery/10.jpg",
+		"my-wedding/gallery/11.jpg",
 	]
 
 }

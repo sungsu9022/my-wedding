@@ -5,7 +5,7 @@
       photo gallery
     </div>
     <div class="gallery-container" >
-      <div class="gallery-inner" :style="{ width : galleryInnerWidth }">
+      <div class="gallery-inner">
         <Flicking :options="{ moveType: 'freeScroll', bound: true }">
           <div class="gallery-item" v-for="(image, index) in images" :key="index" @click="showViewer($event, index)">
             <div class="image">
@@ -35,8 +35,8 @@ export default {
     return {
       itemSize: viewerImages.images.length,
       images : viewerImages.images,
-      imageWidth: "240",
-      galleryInnerWidth: (this.imageWidth * this.itemSize) + 100,
+      // imageWidth: "240",
+      // galleryInnerWidth: (this.imageWidth * this.itemSize) + 100,
     }
   },
   methods: {
@@ -84,7 +84,7 @@ export default {
     overflow-x: auto;
     .gallery-inner {
       display: flex;
-      width: 2500px;
+      width: 2980px;
       .gallery-item {
         flex: 0 0 240px;
         position: relative;
