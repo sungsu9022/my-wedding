@@ -48,6 +48,7 @@ export default {
           initialViewIndex: imageNo,
           fullscreen: true,
           zoomable: false,
+          movable: false,
           toolbar: {
             prev: true,
             next: true,
