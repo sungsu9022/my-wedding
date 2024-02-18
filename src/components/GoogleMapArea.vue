@@ -100,7 +100,7 @@ export default {
   border: 0;
   width: 80%;
   min-height: 310px;
-  min-width: 390px;
+  min-width: 320px;
 }
 
 .navi-apps {

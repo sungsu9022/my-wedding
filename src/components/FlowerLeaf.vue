@@ -13,7 +13,7 @@ export default {
       const shakeDegree = Math.random() * 360;
 
       const displayAreaRatio = this.computeDisplayAreaRatio(this.displayAreaWidth)
-      const leftPosition = Math.random() * displayAreaRatio;
+      const leftPosition = this.computeLeftPosition(displayAreaRatio)
       const translateX = Math.random() * (80 - 20) + 20;
 
       const fallDuration = Math.random() * (16 - 9) + 9;
@@ -50,6 +50,14 @@ export default {
       } else {
         return Math.floor(ratio * 100)
       }
+    },
+    computeLeftPosition(displayAreaRatio) {
+      const halfAreaRatio = Math.floor(displayAreaRatio / 2)
+      const minRange = 50 - halfAreaRatio;
+      const maxRange = 50 + halfAreaRatio - 5;
+      const leftPosition = Math.floor(Math.random() * (maxRange - minRange + 1)) + minRange;
+      console.log("랜덤한 leftPosition:", displayAreaRatio, halfAreaRatio, minRange, maxRange, leftPosition);
+      return leftPosition
     }
   }
 };

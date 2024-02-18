@@ -15,6 +15,12 @@
 
 export default {
   name: "my-audio-player",
+  props: {
+    "is-fixed": {
+      type: Boolean,
+      defaultValue: false,
+    }
+  },
   computed: {
     autoPlayStartTime() {
       return this.autoPlayStartSeconds * 1000
@@ -34,7 +40,6 @@ export default {
     return {
       isPlaying: false,
       autoPlayStartSeconds: 1,
-      fixed: false,
     }
   },
   methods : {

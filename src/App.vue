@@ -1,7 +1,7 @@
 <template>
   <div id="v-app-container">
     <FlowerRain />
-    <AudioPlayer />
+    <AudioPlayer is-fixed="false"/>
     <TopArea />
     <Divider/>
     <InvitationArea />
