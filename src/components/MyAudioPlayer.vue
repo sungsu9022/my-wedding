@@ -1,5 +1,5 @@
 <template>
-  <div class="_fixed_right">
+  <div :class="wrapStyle">
     <button class="circular ui icon button _bgm_color" @click="playAndPause">
       <i v-show="!isPlaying" class="icon volume mute"></i>
       <i v-show="isPlaying" class="icon volume up"></i>
@@ -18,12 +18,23 @@ export default {
   computed: {
     autoPlayStartTime() {
       return this.autoPlayStartSeconds * 1000
-    }
+    },
+    relative() {
+      return !this.fixed
+    },
+    wrapStyle() {
+      if(this.fixed) {
+        return "_fixed_right"
+      } else {
+        return "_relative_right"
+      }
+    },
   },
   data() {
     return {
       isPlaying: false,
-      autoPlayStartSeconds: 1
+      autoPlayStartSeconds: 1,
+      fixed: false,
     }
   },
   methods : {
@@ -51,7 +62,15 @@ export default {
 ._fixed_right {
   bottom: 20px;
   position: fixed;
-  right: 10px;
+  right: 20px;
+  text-align: right;
+  z-index: 9999;
+}
+
+._relative_right {
+  top: 20px;
+  position: relative;
+  right: 20px;
   text-align: right;
   z-index: 9999;
 }

@@ -12,7 +12,8 @@ export default {
 
       const shakeDegree = Math.random() * 360;
 
-      const leftPosition = Math.random() * 100;
+      const displayAreaRatio = this.computeDisplayAreaRatio(this.displayAreaWidth)
+      const leftPosition = Math.random() * displayAreaRatio;
       const translateX = Math.random() * (80 - 20) + 20;
 
       const fallDuration = Math.random() * (16 - 9) + 9;
@@ -36,6 +37,21 @@ export default {
       return `/my-wedding/floral-leaf/floral-leaf-${imageNumber}.png`;
     },
   },
+  data() {
+    return {
+      displayAreaWidth: 430
+    }
+  },
+  methods : {
+    computeDisplayAreaRatio(displayAreaWidth) {
+      const ratio = displayAreaWidth / window.innerWidth
+      if(ratio > 1) {
+        return 100
+      } else {
+        return Math.floor(ratio * 100)
+      }
+    }
+  }
 };
 </script>
 
