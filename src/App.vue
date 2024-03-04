@@ -6,7 +6,7 @@
     <Divider/>
     <InvitationArea />
     <Divider/>
-    <MyGallery />
+    <MyGallery2 />
     <Divider/>
     <GoogleMapArea/>
     <Divider/>
@@ -27,13 +27,13 @@ import Divider from "./components/Divider.vue";
 
 import DisqusComments from "./components/DisqusComments.vue"
 import BankAccountArea from "@/components/BackAccountArea.vue";
-import MyGallery from "@/components/MyGallery.vue";
+import MyGallery2 from "@/components/MyGallery2.vue";
 import GoogleMapArea from "@/components/GoogleMapArea.vue";
 
 export default {
   name: "app",
   components: {
-    MyGallery,
+    MyGallery2,
     BankAccountArea,
     FlowerRain,
     AudioPlayer,
