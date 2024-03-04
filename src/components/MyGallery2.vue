@@ -56,19 +56,16 @@ export default {
   },
   methods: {
     showDetailViewer(image, index) {
-      console.log(image, index)
       this.showViewer = !this.showViewer
       this.selectedImageIndex = index
     },
     beforeViewerImage() {
       const currentIndex = (this.selectedImageIndex - 1 + this.itemSize) % this.itemSize;
-      console.log(currentIndex);
       this.selectedImageIndex = currentIndex
     },
 
     afterViewerImage() {
       const currentIndex = (this.selectedImageIndex + 1) % this.itemSize;
-      console.log(currentIndex);
       this.selectedImageIndex = currentIndex
     },
     closeViewer() {

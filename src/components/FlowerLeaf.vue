@@ -56,7 +56,6 @@ export default {
       const minRange = 50 - halfAreaRatio;
       const maxRange = 50 + halfAreaRatio - 5;
       const leftPosition = Math.floor(Math.random() * (maxRange - minRange + 1)) + minRange;
-      console.log("랜덤한 leftPosition:", displayAreaRatio, halfAreaRatio, minRange, maxRange, leftPosition);
       return leftPosition
     }
   }
