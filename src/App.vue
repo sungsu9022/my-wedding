@@ -53,13 +53,6 @@ export default {
   created() {
   },
   methods: {
-    handleClick(present) {
-      this.isOpen = true;
-      this.selectedPresent = present;
-    },
-    handleClose() {
-      this.isOpen = false;
-    },
   },
 };
 </script>
