@@ -53,11 +53,27 @@ export default {
         }
       })
 
-      const parentElement = document.getElementById("viewer0");
-      parentElement.addEventListener('touchstart', (e) => {
-        e.stopPropagation()
-        e.preventDefault()
+      document.querySelectorAll('[id^="viewer"]').forEach(element => {
+        console.log(element)
+        element.addEventListener('touchstart', (e) => {
+          e.stopPropagation()
+          e.preventDefault()
+        });
+        element.addEventListener('touchend', (e) => {
+          e.stopPropagation()
+          e.preventDefault()
+        });
       });
+
+      const $closeButtons = document.getElementsByClassName("viewer-close")
+      for (let i = 0; i < $closeButtons.length; i++) {
+        const element = $closeButtons[i];
+        element.addEventListener('touchend', (e) => {
+          e.preventDefault()
+          $viewer.destroy()
+        })
+      }
+
     }
   }
 };
