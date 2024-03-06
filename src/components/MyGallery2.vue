@@ -52,8 +52,14 @@ export default {
           }
         }
       })
+
+      const parentElement = document.getElementById("viewer0");
+      parentElement.addEventListener('touchstart', (e) => {
+        e.stopPropagation()
+        e.preventDefault()
+      });
     }
-  },
+  }
 };
 </script>
 
