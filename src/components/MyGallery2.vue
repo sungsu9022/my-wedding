@@ -54,7 +54,6 @@ export default {
       })
 
       document.querySelectorAll('[id^="viewer"]').forEach(element => {
-        console.log(element)
         element.addEventListener('touchstart', (e) => {
           e.stopPropagation()
           e.preventDefault()
@@ -106,22 +105,22 @@ export default {
 
 @media (max-width:412px){
   ._gallery_image {
-    width:130px!important;
-    min-height: 162px;
-  }
-}
-
-@media (max-width:390px){
-  ._gallery_image {
     width:125px!important;
     min-height: 156px;
   }
 }
 
-@media (max-width:375px){
+@media (max-width:390px){
   ._gallery_image {
     width:120px!important;
     min-height: 149px;
+  }
+}
+
+@media (max-width:375px){
+  ._gallery_image {
+    width:112px!important;
+    min-height: 139px;
   }
 }
 
