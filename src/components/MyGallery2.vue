@@ -53,7 +53,9 @@ export default {
         }
       })
 
-      document.querySelectorAll('[id^="viewer"]').forEach(element => {
+      const viewerCanvas = document.getElementsByClassName("viewer-canvas")
+      for(let i=0;i<viewerCanvas.length;i++) {
+        const element = viewerCanvas[i]
         element.addEventListener('touchstart', (e) => {
           e.stopPropagation()
           e.preventDefault()
@@ -62,15 +64,6 @@ export default {
           e.stopPropagation()
           e.preventDefault()
         });
-      });
-
-      const $closeButtons = document.getElementsByClassName("viewer-close")
-      for (let i = 0; i < $closeButtons.length; i++) {
-        const element = $closeButtons[i];
-        element.addEventListener('touchend', (e) => {
-          e.preventDefault()
-          $viewer.destroy()
-        })
       }
 
     }
