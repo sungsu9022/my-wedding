@@ -105,15 +105,15 @@ export default {
 
 @media (max-width:412px){
   ._gallery_image {
-    width:125px!important;
-    min-height: 156px;
+    width:120px!important;
+    min-height: 149px;
   }
 }
 
 @media (max-width:390px){
   ._gallery_image {
-    width:120px!important;
-    min-height: 149px;
+    width:112px!important;
+    min-height: 139px;
   }
 }
 
@@ -126,8 +126,8 @@ export default {
 
 @media (max-width:360px) {
   ._gallery_image {
-    width:112px!important;
-    min-height: 139px;
+    width:105px!important;
+    min-height: 131px;
   }
 }
 
