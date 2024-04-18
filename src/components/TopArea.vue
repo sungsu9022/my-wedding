@@ -11,7 +11,7 @@
     <div>
       <div class="photo-wrap simple">
         <div class="intro-blend-wrap photo gradient-none"><!---->
-          <img src="/my-wedding/main.png" class="intro-blend-image img-blur"> <!---->
+          <img src="/my-wedding/main/main1.jpeg" class="intro-blend-image img-blur"> <!---->
         </div>
       </div>
     </div>
