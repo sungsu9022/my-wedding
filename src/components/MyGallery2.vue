@@ -50,13 +50,13 @@ export default {
               $viewer.destroy()
             },
           },
-          view: (e) => {
-            const canvasElement = e.target.viewer.canvas
-            canvasElement.style.display = 'none';
-            setTimeout(() => {
-              this.fadeInImage(canvasElement)
-            }, 10)
-          },
+          // view: (e) => {
+          //   const canvasElement = e.target.viewer.canvas
+          //   canvasElement.style.display = 'none';
+          //   setTimeout(() => {
+          //     this.fadeInImage(canvasElement)
+          //   }, 10)
+          // },
         }
       })
 
