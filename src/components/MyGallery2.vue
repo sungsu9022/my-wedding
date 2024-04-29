@@ -49,12 +49,19 @@ export default {
             close: () => {
               $viewer.destroy()
             },
-          }
+          },
+          view: (e) => {
+            const canvasElement = e.target.viewer.canvas
+            canvasElement.style.display = 'none';
+            setTimeout(() => {
+              this.fadeInImage(canvasElement)
+            }, 10)
+          },
         }
       })
 
       const viewerCanvas = document.getElementsByClassName("viewer-canvas")
-      for(let i=0;i<viewerCanvas.length;i++) {
+      for (let i = 0; i < viewerCanvas.length; i++) {
         const element = viewerCanvas[i]
         element.addEventListener('touchstart', (e) => {
           e.stopPropagation()
@@ -66,8 +73,27 @@ export default {
         });
       }
     },
-    cropImageStyle(image) {
-      return `background-image: url(${image})`
+    fadeInImage(canvasElement) {
+      const imgElement = canvasElement.querySelector('img');
+      imgElement.style.width = '100%';
+      imgElement.style.height = 'auto';
+      imgElement.style.maxWidth = '100%!important';
+      imgElement.style.marginLeft = '0px';
+      imgElement.style.marginRight = '0px';
+      imgElement.style.marginBottom = '0px';
+
+      canvasElement.style.display = 'block';
+      imgElement.style.opacity = '0';
+      imgElement.style.display = 'block';
+
+      let opacity = 0;
+      const timer = setInterval(() => {
+        if (opacity >= 1) {
+          clearInterval(timer);
+        }
+        imgElement.style.opacity = opacity;
+        opacity += 0.1;
+      }, 50)
     },
   }
 };
@@ -132,6 +158,13 @@ export default {
     width:125px!important;
     //min-height: 156px;
   }
+}
+
+body > .viewer-canvas > img {
+  width: 100%!important;
+  max-width: 100%!important;
+  margin-left:0px!important;
+  margin: 0px!important;
 }
 
 </style>
