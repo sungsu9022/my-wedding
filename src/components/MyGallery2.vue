@@ -65,8 +65,10 @@ export default {
           e.preventDefault()
         });
       }
-
-    }
+    },
+    cropImageStyle(image) {
+      return `background-image: url(${image})`
+    },
   }
 };
 </script>
@@ -92,42 +94,43 @@ export default {
 
 ._gallery_image {
   width:133px!important;
-  min-height: 166px;
+  //min-height: 166px;
   height: auto;
+  border-radius: 4px;
 }
 
 @media (max-width:412px){
   ._gallery_image {
     width:120px!important;
-    min-height: 149px;
+    //min-height: 149px;
   }
 }
 
 @media (max-width:390px){
   ._gallery_image {
     width:112px!important;
-    min-height: 139px;
+    //min-height: 139px;
   }
 }
 
 @media (max-width:375px){
   ._gallery_image {
     width:112px!important;
-    min-height: 139px;
+    //min-height: 139px;
   }
 }
 
 @media (max-width:360px) {
   ._gallery_image {
     width:105px!important;
-    min-height: 131px;
+    //min-height: 131px;
   }
 }
 
 @media (max-width:280px) {
   ._gallery_image {
     width:125px!important;
-    min-height: 156px;
+    //min-height: 156px;
   }
 }
 
