@@ -1,14 +1,14 @@
 export default {
 	images : [
-		"my-wedding/gallery/0.jpg",
-		"my-wedding/gallery/1.jpg",
-		"my-wedding/gallery/2.jpg",
+		"my-wedding/gallery/0_h.jpg",
+		"my-wedding/gallery/1_h.jpg",
+		"my-wedding/gallery/2_h.jpg",
 		"my-wedding/gallery/3.jpg",
 		"my-wedding/gallery/4.jpg",
 		"my-wedding/gallery/5.jpg",
-		"my-wedding/gallery/6.jpg",
-		"my-wedding/gallery/7.jpg",
-		"my-wedding/gallery/8.jpg",
+		"my-wedding/gallery/6_h.jpg",
+		"my-wedding/gallery/7_h.jpg",
+		"my-wedding/gallery/8_h.jpg",
 		"my-wedding/gallery/9.jpg",
 		"my-wedding/gallery/10.jpg",
 		"my-wedding/gallery/11.jpg",
@@ -24,7 +24,6 @@ export default {
 		"my-wedding/gallery/21.jpg",
 		"my-wedding/gallery/22.jpg",
 		"my-wedding/gallery/23.jpg",
-		"my-wedding/gallery/24.jpg",
 	]
 
 }
