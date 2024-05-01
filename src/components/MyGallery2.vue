@@ -43,6 +43,7 @@ export default {
           fullscreen: true,
           zoomable: false,
           movable: false,
+          navbar: false,
           toolbar: {
             prev: true,
             next: true,
@@ -50,13 +51,13 @@ export default {
               $viewer.destroy()
             },
           },
-          // view: (e) => {
-          //   const canvasElement = e.target.viewer.canvas
-          //   canvasElement.style.display = 'none';
-          //   setTimeout(() => {
-          //     this.fadeInImage(canvasElement)
-          //   }, 10)
-          // },
+          view: (e) => {
+            const canvasElement = e.target.viewer.canvas
+            canvasElement.style.display = 'none';
+            setTimeout(() => {
+              this.fadeInImage(canvasElement)
+            }, 100)
+          },
         }
       })
 
@@ -75,12 +76,11 @@ export default {
     },
     fadeInImage(canvasElement) {
       const imgElement = canvasElement.querySelector('img');
-      imgElement.style.width = '100%';
-      imgElement.style.height = 'auto';
-      imgElement.style.maxWidth = '100%!important';
-      imgElement.style.marginLeft = '0px';
-      imgElement.style.marginRight = '0px';
-      imgElement.style.marginBottom = '0px';
+      if(this.isWideImage(imgElement.src)) {
+        this.setWideImageStyle(imgElement)
+      } else {
+        // this.setVerticalImageStyle(imgElement)
+      }
 
       canvasElement.style.display = 'block';
       imgElement.style.opacity = '0';
@@ -95,7 +95,30 @@ export default {
         opacity += 0.1;
       }, 50)
     },
-  }
+    setWideImageStyle(imgElement) {
+      imgElement.style.width = '100%';
+      imgElement.style.height = 'auto';
+      imgElement.style.maxWidth = '100%!important';
+      imgElement.style.marginLeft = '0px';
+      imgElement.style.marginRight = '0px';
+      imgElement.style.marginBottom = '0px';
+    },
+    setVerticalImageStyle(imgElement) {
+      imgElement.style.width = '100%';
+      imgElement.style.height = 'auto';
+      imgElement.style.margin = null
+      imgElement.style.marginLeft = '0px';
+      imgElement.style.marginRight = '0px';
+      imgElement.style.marginBottom = '0px';
+    },
+    isWideImage(imageSrc) {
+      if (/_h\.jpg$/.test(imageSrc)) {
+        return true
+      } else {
+        return false
+      }
+    },
+  },
 };
 </script>
 
