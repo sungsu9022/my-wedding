@@ -3,7 +3,7 @@
       <div class="title_area">
         Celebrate
       </div>
-    <img class="title_img2" src="../assets/images/new/bank/title.png" />
+    <img class="title_img2" src="../assets/images/new/bank/title.svg" />
 
     <div class="text_area">
       참석이 어려우신 분들께서는<br>

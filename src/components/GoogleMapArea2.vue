@@ -4,7 +4,7 @@
       Location
     </div>
     <div class="description">
-      <img class="title_img2" src="../assets/images/new/map/title2.png" />
+      <img class="title_img2" src="../assets/images/new/map/title.svg" />
     </div>
 
     <div class="address_area">
