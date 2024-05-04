@@ -53,7 +53,7 @@ export default {
 <style scoped lang="scss">
 .comments {
   text-align: center;
-  background: var(--secondary-bg-color);
+  background-color: #FBFBFB;
 }
 
 .title_area {
@@ -79,7 +79,6 @@ export default {
 }
 
 ._disqus_wrap {
-
   margin: 10px;
 }
 

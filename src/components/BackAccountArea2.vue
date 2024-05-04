@@ -40,6 +40,7 @@ export default {
 
 .bank_area {
   margin-top: 56px;
+  padding-bottom: 56px;
   text-align: center;
   background: var(--secondary-bg-color);
 }
