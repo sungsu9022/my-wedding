@@ -19,16 +19,16 @@
                   국민은행<br>
                   {{ this.bankAccount.male  }}
                 </span>
-              </td>
-              <td class="ten wide right aligned">
-                <div class="ui buttons">
-                <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.male)">
-                  <i class="copy icon"></i>
-                  복사
-                </button>
-                <button class="ui mini button _kakaopay_btn"  @click="moveKakaoPay($event, this.kakaoPay.male)">
-                  <img class="ui mini image" src="~@/assets/images/kakaopay-btn.png">
-                </button>
+                <div class="_bank_btn_area">
+                  <div class="ui buttons">
+                    <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.male)">
+                      <i class="copy icon"></i>
+                      복사
+                    </button>
+                    <button class="ui mini button _kakaopay_btn"  @click="moveKakaoPay($event, this.kakaoPay.male)">
+                      <img class="ui mini image" src="~@/assets/images/kakaopay-btn.png">
+                    </button>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -39,13 +39,13 @@
                   국민은행<br>
                   {{ this.bankAccount.maleMother }}
                 </span>
-              </td>
-              <td class="right aligned">
-                <div class="ui buttons">
-                  <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.maleMother)">
-                    <i class="copy icon"></i>
-                    복사
-                  </button>
+                <div class="_bank_btn_area">
+                  <div class="ui buttons">
+                    <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.maleMother)">
+                      <i class="copy icon"></i>
+                      복사
+                    </button>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -68,18 +68,18 @@
               <p>신부 - <strong>김규빈</strong></p>
               <span class="_bank_info">
                 기업은행<br>
-                {{ this.bankAccount.male  }}
+                {{ this.bankAccount.female  }}
               </span>
-            </td>
-            <td class="ten wide right aligned">
-              <div class="ui buttons">
-                <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.female)">
-                  <i class="copy icon"></i>
-                  복사
-                </button>
-                <button class="ui mini button _kakaopay_btn" @click="moveKakaoPay($event, this.kakaoPay.female)">
-                  <img class="ui mini image" src="~@/assets/images/kakaopay-btn.png">
-                </button>
+              <div class="_bank_btn_area">
+                <div class="ui buttons">
+                  <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.female)">
+                    <i class="copy icon"></i>
+                    복사
+                  </button>
+                  <button class="ui mini button _kakaopay_btn" @click="moveKakaoPay($event, this.kakaoPay.female)">
+                    <img class="ui mini image" src="~@/assets/images/kakaopay-btn.png">
+                  </button>
+                </div>
               </div>
             </td>
           </tr>
@@ -90,13 +90,13 @@
                   농협<br>
                   {{ this.bankAccount.femaleMother }}
                 </span>
-            </td>
-            <td class="right aligned">
-              <div class="ui buttons">
-                <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.femaleMother)">
-                  <i class="copy icon"></i>
-                  복사
-                </button>
+              <div class="_bank_btn_area">
+                <div class="ui buttons">
+                  <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.femaleMother)">
+                    <i class="copy icon"></i>
+                    복사
+                  </button>
+                </div>
               </div>
             </td>
           </tr>
@@ -228,6 +228,10 @@ export default {
 ._title_area {
   font-size: 14px;
   line-height: 28px;
+}
+
+._bank_btn_area {
+  text-align: right;
 }
 
 ._kakaopay_btn {
