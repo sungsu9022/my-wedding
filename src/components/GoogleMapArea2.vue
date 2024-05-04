@@ -51,7 +51,7 @@
 
     <div class="map_desc_area">
       <p>자가용</p>
-      <Divider2 :padding-bottom="0" :width="343"/>
+      <Divider3 :padding-bottom="0" padding-right="44"/>
       <strong>경부고속도로</strong><br>
       양재IC 양재 방면으로 오른쪽 방향<br>
       > 개포3, 4단지 삼거리(대치역 방면 좌회전)<br>
@@ -69,14 +69,15 @@
 
     <div class="map_desc_area">
       <p>지하철</p>
-      <Divider2 :padding-bottom="0" :width="343"/>
+      <Divider3 :padding-bottom="0" padding-right="44"/>
+<!--      <Divider2 :padding-bottom="0" :width="343"/>-->
       <strong>2호선 삼성역 3번 출구 30m 전방에서 셔틀버스 운행</strong><br>
       셔틀버스 수시운행, 도보 이용시 7분 소요
     </div>
 
     <div class="map_desc_area">
       <p>버스</p>
-      <Divider2 :padding-bottom="0" :width="343"/>
+      <Divider3 :padding-bottom="0" padding-right="44"/>
       <strong>휘문고, 대치 2동 주민센터 하차</strong><br>
       간선: 342, 401<br>
       지선: 4318, 4319<br>
@@ -88,12 +89,12 @@
 
 <script>
 
-import Divider2 from "@/components/Divider2.vue";
+import Divider3 from "@/components/Divider3.vue";
 
 export default {
   name: "google-map-area",
   components : {
-    Divider2
+    Divider3
   },
   data() {
     return {
