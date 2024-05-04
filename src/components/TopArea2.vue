@@ -54,6 +54,8 @@ export default {
 ._main_image {
   max-width: 382px;
   max-height: 254px;
+  width: 100%;
+  height: auto;
 }
 
 ._text {
