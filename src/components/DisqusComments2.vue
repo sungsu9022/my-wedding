@@ -72,13 +72,15 @@ export default {
 
 .desc_area {
   margin-top: 21px;
+  margin-bottom: 36px;
   font-size: 14px;
   line-height: 30px;
   color: #797979;
 }
 
 ._disqus_wrap {
-  margin-top: 36px;
+
+  margin: 10px;
 }
 
 ._hidden {

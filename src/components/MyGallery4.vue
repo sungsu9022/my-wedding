@@ -49,6 +49,7 @@ export default {
           zoomable: false,
           movable: false,
           navbar: false,
+          title: false,
           toolbar: {
             prev: true,
             next: true,
