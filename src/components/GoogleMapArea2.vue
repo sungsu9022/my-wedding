@@ -142,7 +142,7 @@ export default {
   font-family: "SnellRoundhand";
   font-size: 15px;
   line-height: 24px;
-  color: #797979;
+  color: #37794F;
 }
 
 .title_img2 {
