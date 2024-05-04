@@ -12,7 +12,7 @@
       충분히 감사드립니다.
     </div>
 
-    <bank-accordion style="margin-top: 24px"/>
+    <bank-accordion style="margin-top: 24px;padding-bottom: 5px"/>
 
   </div>
 </template>
