@@ -3,7 +3,7 @@
     <div class="title_area">
       Guest message
     </div>
-    <img class="title_img2" src="../assets/images/new/comments/title.png" />
+    <img class="title_img2" src="../assets/images/new/comments/title.svg" />
 
     <div class="desc_area">
       축하 메세지를 남겨주세요.
