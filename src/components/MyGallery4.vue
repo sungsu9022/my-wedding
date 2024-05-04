@@ -83,13 +83,11 @@ export default {
       const imgElement = canvasElement.querySelector('img');
       this.setImageStyle(imgElement)
       if(this.isWideImage(imgElement.src) && !this.computeWideImageMargin) {
-        console.log("first wide");
         await this.delay(200)
         const marginTop = this.computeMarginTop(imgElement)
         this.computeWideImageMargin = marginTop
       }
       if(!this.isWideImage(imgElement.src) && !this.computeNarrowImageMargin) {
-        console.log("first narrow");
         await this.delay(200)
         const marginTop = this.computeMarginTop(imgElement)
         this.computeNarrowImageMargin = marginTop
