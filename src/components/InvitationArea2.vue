@@ -72,8 +72,8 @@ export default {
   }
   .invi_main_image {
     margin-top: 50px;
-    width: 430px;
-    height: 287px;
+    width: 100%;
+    height: auto;
   }
 }
 </style>
