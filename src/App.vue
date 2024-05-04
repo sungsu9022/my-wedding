@@ -127,6 +127,7 @@ html {
   box-shadow:0 0 0 1px rgba(0,0,0,.04);
   background: var(--primary-bg-color);
   -webkit-scrollbar{display:none};
+  overflow-x: hidden;
 }
 
 </style>
