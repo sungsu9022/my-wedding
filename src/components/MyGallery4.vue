@@ -34,6 +34,9 @@ export default {
       itemSize: viewerImages.images.length,
       images : viewerImages.images,
       selectedImageIndex: 0,
+      computeWideImageMargin: undefined,
+      computeNarrowImageMargin: undefined,
+
     }
   },
   methods: {
@@ -78,27 +81,28 @@ export default {
     },
     async fadeInImage(canvasElement) {
       const imgElement = canvasElement.querySelector('img');
-      if(this.isWideImage(imgElement.src)) {
-        this.setWideImageStyle(imgElement)
-      } else {
-        this.setVerticalImageStyle(imgElement)
-
+      this.setImageStyle(imgElement)
+      if(this.isWideImage(imgElement.src) && !this.computeWideImageMargin) {
+        console.log("first wide");
+        await this.delay(200)
+        const marginTop = this.computeMarginTop(imgElement)
+        this.computeWideImageMargin = marginTop
       }
-      await this.delay(200)
-      const marginTop = this.computeMarginTop(imgElement)
-      imgElement.style.marginTop = marginTop + 'px';
-
+      if(!this.isWideImage(imgElement.src) && !this.computeNarrowImageMargin) {
+        console.log("first narrow");
+        await this.delay(200)
+        const marginTop = this.computeMarginTop(imgElement)
+        this.computeNarrowImageMargin = marginTop
+      }
+      if(this.isWideImage(imgElement.src)) {
+        imgElement.style.marginTop = this.computeWideImageMargin + 'px';
+      } else {
+        imgElement.style.marginTop = this.computeNarrowImageMargin + 'px';
+      }
       canvasElement.style.visibility = 'visible';
       imgElement.style.display = 'block';
-
     },
-    async setWideImageStyle(imgElement) {
-      imgElement.style.width = '100%';
-      imgElement.style.height = 'auto';
-      imgElement.style.maxWidth = null;
-      imgElement.style.margin = null;
-    },
-    async setVerticalImageStyle(imgElement) {
+    async setImageStyle(imgElement) {
       imgElement.style.width = '100%';
       imgElement.style.height = 'auto';
       imgElement.style.maxWidth = null;
