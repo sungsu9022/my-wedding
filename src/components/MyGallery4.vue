@@ -183,10 +183,10 @@ export default {
   }
 }
 
-@media (max-width:280px) {
+@media (max-width:330px) {
   ._gallery_image {
-    width:125px!important;
-    //min-height: 156px;
+    width:102px!important;
+    //min-height: 131px;
   }
 }
 </style>
