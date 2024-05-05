@@ -1,11 +1,14 @@
 <template>
   <div class="comments">
-    <div class="title_area">
+    <div class="title_area _english_font _big_text _green">
       Guest message
     </div>
-    <img class="title_img2" src="../assets/images/new/comments/title.svg" />
 
-    <div class="desc_area">
+    <div class="_big_text _green">
+      <b>방명록</b>
+    </div>
+
+    <div class="desc_area _large_text _gray">
       축하 메세지를 남겨주세요.
     </div>
 
@@ -58,24 +61,14 @@ export default {
 
 .title_area {
   padding-top: 54px;
-  font-family: "SnellRoundhand";
-  font-size: 15px;
   line-height: 24px;
-  color: #37794F;
-}
-
-.title_img2 {
-  margin-top: 15px;
-  width: 48px;
-  height: 16px;
+  margin-bottom: 8px;
 }
 
 .desc_area {
-  margin-top: 21px;
+  margin-top: 16px;
   margin-bottom: 36px;
-  font-size: 14px;
   line-height: 30px;
-  color: #797979;
 }
 
 ._disqus_wrap {

@@ -1,9 +1,12 @@
 <template>
   <div class="_gallery">
-    <div class="title_area">
+    <div class="title_area _english_font _big_text _green">
       gallery
     </div>
-    <div class="description">
+    <div class="_big_text _green">
+      <b>웨딩 갤러리</b>
+    </div>
+    <div class="description _large_text _silver">
       이미지를 클릭하시면 확대보기가 가능합니다.
     </div>
     <div class="ui images">
@@ -133,16 +136,11 @@ export default {
   margin-top: 80px;
   text-align: center;
   .title_area {
-    font-family: "SnellRoundhand";
-    font-size: 15px;
     line-height: 24px;
-    color: #37794F;
     margin-bottom: 8px;
   }
   .description {
-    font-size: 13px;
-    font-family: "GabiaHeuldot";
-    color: #B1B1B1;
+    margin-top: 16px;
     margin-bottom: 32px;
   }
 }

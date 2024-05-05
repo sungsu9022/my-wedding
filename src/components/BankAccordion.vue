@@ -1,7 +1,7 @@
 <template>
   <div class="c-account _wrap">
     <div class="ui styled accordion" ref="accordion">
-      <div class="title _title_area"
+      <div class="title _title_area _small_text"
            :class="maleActive"
            @click="toggleArea($event, 'MALE')"
       >
@@ -53,7 +53,7 @@
         </table>
       </div>
 
-      <div class="title"
+      <div class="title _title_area _small_text"
            :class="femaleActive"
            @click="toggleArea($event, 'FEMALE')">
         신부측 계좌번호
@@ -61,7 +61,7 @@
         <i v-show="!femaleActive" class="chevron right icon"></i>
       </div>
       <div class="content" :class="femaleActive">
-        <table class="ui basic table">
+        <table class="ui basic table _tiny_text">
           <tbody>
           <tr>
             <td class="six wide left aligned">
@@ -191,17 +191,14 @@ export default {
   padding-right: 50px;
   font-size: 14px;
   p {
-    font-size: 14px;
     line-height: 24px;
     color: #797979;
   }
   strong {
-    font-size: 14px;
     color: #333333;
   }
   span {
     line-height: 22px;
-    font-size: 14px;
     color: #797979;
   }
   ._bank_info {
@@ -226,7 +223,6 @@ export default {
 }
 
 ._title_area {
-  font-size: 14px;
   line-height: 28px;
 }
 

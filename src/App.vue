@@ -54,23 +54,23 @@ export default {
 </script>
 
 <style>
+/* 기본 폰트 정의 */
 @font-face {
-  font-family: "GowunDodum";
-  src: url("assets/fonts/GowunDodum-Regular.ttf") format("truetype");
+  font-family: 'MaruBuri';
+  src: url('assets/fonts/MaruBuri-SemiBold.otf') format('opentype');
   font-weight: normal;
-  font-style: normal;
+}
+
+/* Bold 폰트 정의 */
+@font-face {
+  font-family: 'MaruBuri';
+  src: url('assets/fonts/MaruBuri-Bold.otf') format('opentype');
+  font-weight: bold;
 }
 
 @font-face {
   font-family: "SnellRoundhand";
   src: url("assets/fonts/SnellRoundhand.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "GabiaHeuldot";
-  src: url("assets/fonts/GabiaHeuldot.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -114,8 +114,8 @@ html {
 
 
 #v-app-container {
-  font-family: 'GabiaHeuldot', sans-serif !important;
-  font-size: 15px;
+  font-family: 'MaruBuri', sans-serif !important;
+  font-size: 17px;
   max-width: 430px;
   position:relative;
   width:100%;
@@ -129,5 +129,17 @@ html {
   -webkit-scrollbar{display:none};
   overflow-x: hidden;
 }
+
+._big_text { font-size: 17px;}
+._large_text {font-size: 16px;}
+._small_text {font-size: 15px!important;}
+._tiny_text {font-size: 14px;}
+
+._green { color: #37794f}
+._black { color: #333333}
+._gray { color: #797979}
+._silver { color: #B1B1B1}
+
+._english_font { font-family: "SnellRoundhand"; }
 
 </style>

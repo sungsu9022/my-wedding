@@ -1,9 +1,9 @@
 <template>
   <div class="invitation_area">
-    <p class="header">
-      "우리 손 잡을까요?"<br />
+    <p class="header _big_text _green">
+      <strong>"우리 손 잡을까요?"</strong><br />
     </p>
-    <div class="desc">
+    <div class="desc _large_text _gray">
       각자의 삶을 열심히 살아온 저희가,<br />
       이제는 손을 잡고 함께 나란히 걸어가려 합니다.<br />
       사랑한다는 말이 어울리는 사람과 함께<br />
@@ -15,8 +15,7 @@
     <Divider2/>
 
     <div class="names">
-      <img class="names_image" src="../assets/images/new/invitation/male_naems.png" />
-      <img class="names_image" src="../assets/images/new/invitation/female_names.png" />
+      <img class="names_image" src="../assets/images/new/invitation/names.png" />
     </div>
 
     <img class="invi_main_image" src="../assets/images/new/invitation/invi_img.png" />
@@ -45,13 +44,9 @@ export default {
   line-height: 0;
   .header {
     padding-top: 56px;
-    color: #37794F;
     line-height: 28px;
-    font-size: 16px;
   }
   .desc {
-    color: #797979;
-    font-size: 14px;
     line-height: 30px;
     padding-bottom: 36px;
   }
@@ -67,8 +62,8 @@ export default {
     line-height: 0;
   }
   .names_image {
-    width: 252px;
-    height: 28px;
+    width: 291px;
+    height: 58px;
   }
   .invi_main_image {
     margin-top: 50px;
