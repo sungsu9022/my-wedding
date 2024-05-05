@@ -139,6 +139,7 @@ export default {
 }
 
 .title_area {
+  margin-top: 56px;
   line-height: 24px;
   color: #797979;
   margin-bottom: 8px;

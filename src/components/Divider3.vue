@@ -1,6 +1,10 @@
 <template>
   <div class="line_area"
-       :style="{ paddingTop: paddingTop + 'px', paddingBottom: paddingBottom + 'px', paddingRight: paddingRight + 'px'}"
+       :style="{ paddingTop: paddingTop + 'px',
+       paddingBottom: paddingBottom + 'px',
+       paddingRight: paddingRight + 'px',
+       paddingLeft: paddingLeft + 'px'
+  }"
   >
     <hr class="line">
   </div>
@@ -17,6 +21,10 @@ export default {
     paddingBottom: {
       type: Number,
       defaultValue: 36,
+    },
+    paddingLeft: {
+      type: Number,
+      defaultValue: 0,
     },
     paddingRight: {
       type: Number,

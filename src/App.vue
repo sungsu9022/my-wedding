@@ -5,7 +5,7 @@
     <TopArea2/>
     <InvitationArea2 />
     <MyGallery4 />
-    <Divider2 :padding-top="30"/>
+    <Divider3 :padding-top="64" :padding-bottom="0" padding-right="24" padding-left="24"/>
     <GoogleMapArea2 />
     <BankAccountArea2/>
     <DisqusComments2/>
@@ -20,11 +20,11 @@ import FlowerRain from "./common/FlowerRain.vue";
 import AudioPlayer from "./components/MyAudioPlayer.vue";
 import TopArea2 from "./components/TopArea2.vue";
 import InvitationArea2 from "./components/InvitationArea2.vue";
-import Divider2 from "./components/Divider2.vue";
 import DisqusComments2 from "./components/DisqusComments2.vue"
 import BankAccountArea2 from "@/components/BackAccountArea2.vue";
 import MyGallery4 from "@/components/MyGallery4.vue";
 import GoogleMapArea2 from "@/components/GoogleMapArea2.vue";
+import Divider3 from "@/components/Divider3.vue";
 
 export default {
   name: "app",
@@ -35,7 +35,7 @@ export default {
     AudioPlayer,
     TopArea2,
     InvitationArea2,
-    Divider2,
+    Divider3,
     DisqusComments2,
     GoogleMapArea2,
   },

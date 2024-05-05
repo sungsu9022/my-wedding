@@ -12,7 +12,7 @@
       이렇게 알려드립니다.
     </div>
 
-    <Divider2/>
+    <Divider3 :padding-bottom="0" padding-right="24" padding-left="24"/>
 
     <div class="names">
       <img class="names_image" src="../assets/images/new/invitation/names.png" />
@@ -25,12 +25,12 @@
 
 <script>
 
-import Divider2 from "@/components/Divider2.vue";
+import Divider3 from "@/components/Divider3.vue";
 
 export default {
   name: "invitation-area",
   components: {
-    Divider2,
+    Divider3,
   },
   methods: {
   },
@@ -60,6 +60,7 @@ export default {
   }
   .names {
     line-height: 0;
+    margin-top: 24px;
   }
   .names_image {
     width: 291px;
