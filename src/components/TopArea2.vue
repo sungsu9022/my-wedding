@@ -51,7 +51,7 @@ export default {
 ._main_date_warp {
   font-family: "SourceSerifPro-Semibold";
   text-align: left;
-  padding-top:90px;
+  padding-top:80px;
   margin-left: 24px;
   font-size: 32px;
   ._and {
@@ -60,6 +60,7 @@ export default {
     font-size: 24px;
   }
   p {
+    margin-top: 5px;
     margin-bottom: 5px;
   }
 }
