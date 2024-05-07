@@ -75,6 +75,13 @@ export default {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "SourceSerifPro-Semibold";
+  src: url("assets/fonts/SourceSerifPro-Semibold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 html {
   --img-blur: 0px;
@@ -135,7 +142,7 @@ html {
 ._small_text {font-size: 15px!important;}
 ._tiny_text {font-size: 14px;}
 
-._green { color: #37794f}
+._green { color: #37794f;}
 ._black { color: #333333}
 ._gray { color: #797979}
 ._silver { color: #B1B1B1}

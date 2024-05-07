@@ -1,11 +1,24 @@
 <template>
   <div>
-    <div class="_main_left_warp" style="padding-top:90px;">
-      <img class="_main_date" src="../assets/images/new/top/main_date.png" />
+    <div class="_main_date_warp _green">
+      <p><b>06</b></p>
+      <div style="width: 18.16px;margin-left: 8px;">
+      <Divider3
+          :padding-bottom="0"
+          :padding-right="0"
+          color="#37794f"
+          :opacity="0.3"
+          :hr-margin="0"
+      />
+      </div>
+      <p><b>08</b></p>
     </div>
 
-    <div class="_main_left_warp" style="padding-top:177px;">
-      <img class="_main_title_img" src="../assets/images/new/top/main_title.png" />
+    <div class="_main_left_warp _green" style="padding-top:128px;">
+      <p class="_english_font" style="font-size: 20px;margin-bottom: 12px;">
+        The marriage of
+      </p>
+      <p>박성수 <span class="_english_font _and">&</span> 김규빈</p>
     </div>
 
     <div class="_main_image_warp">
@@ -16,23 +29,50 @@
       <div class="_main_txt">
         <strong>2024년 6월 8일 토요일 오후 5시</strong>
       </div>
-      <div class="_large_text">노블발렌티 대치점 단독홀</div>
+      <div class="_large_text" style="margin-top: 5px;">노블발렌티 대치점 단독홀</div>
     </div>
   </div>
 </template>
 
 <script>
+
+import Divider3 from "@/components/Divider3.vue";
 export default {
   name: "top-area",
+  components : {
+    Divider3,
+  },
   methods: {
   },
 };
 </script>
 
 <style lang="scss" scoped>
+._main_date_warp {
+  font-family: "SourceSerifPro-Semibold";
+  text-align: left;
+  padding-top:90px;
+  margin-left: 24px;
+  font-size: 32px;
+  ._and {
+    margin-left: 12px;
+    margin-right: 12px;
+    font-size: 24px;
+  }
+  p {
+    margin-bottom: 5px;
+  }
+}
+
 ._main_left_warp {
   text-align: left;
   margin-left: 24px;
+  font-size: 23px;
+  ._and {
+    margin-left: 12px;
+    margin-right: 12px;
+    font-size: 24px;
+  }
 }
 
 ._main_date {

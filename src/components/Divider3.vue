@@ -3,10 +3,11 @@
        :style="{ paddingTop: paddingTop + 'px',
        paddingBottom: paddingBottom + 'px',
        paddingRight: paddingRight + 'px',
-       paddingLeft: paddingLeft + 'px'
+       paddingLeft: paddingLeft + 'px',
+       opacity: opacity
   }"
   >
-    <hr class="line">
+    <hr class="line" :style="{ color: color, margin: hrMargin}">
   </div>
 </template>
 
@@ -30,6 +31,16 @@ export default {
       type: Number,
       defaultValue: 44,
     },
+    color: {
+      type: String,
+    },
+    opacity: {
+      type: Number,
+      defaultValue: 1
+    },
+    hrMargin: {
+      type: Number
+    }
   }
 };
 </script>
