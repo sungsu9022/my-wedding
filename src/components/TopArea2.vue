@@ -2,7 +2,7 @@
   <div>
     <div class="_main_date_warp _green">
       <p><b>06</b></p>
-      <div style="width: 18.16px;margin-left: 8px;">
+      <div style="width: 33.28px;">
       <Divider3
           :padding-bottom="0"
           :padding-right="0"
