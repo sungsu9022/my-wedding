@@ -14,14 +14,14 @@
           <tbody>
             <tr>
               <td class="six wide left aligned">
-                <p>신랑 - <strong>박성수</strong></p>
+                <p>신랑 - <strong>{{ this.bankAccount.male.name  }}</strong></p>
                 <span class="_bank_info">
-                  국민은행<br>
-                  {{ this.bankAccount.male  }}
+                  {{ this.bankAccount.male.bankName  }}<br>
+                  {{ this.bankAccount.male.account  }}
                 </span>
                 <div class="_bank_btn_area">
                   <div class="ui buttons">
-                    <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.male)">
+                    <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.male.account)">
                       <i class="copy icon"></i>
                       복사
                     </button>
@@ -34,14 +34,14 @@
             </tr>
             <tr>
               <td class="left aligned">
-                <p>신랑 혼주 - <strong>신미애</strong></p>
+                <p>신랑 혼주 - <strong>{{ this.bankAccount.maleParent.name  }}</strong></p>
                 <span class="_bank_info">
-                  국민은행<br>
-                  {{ this.bankAccount.maleMother }}
+                  {{ this.bankAccount.maleParent.bankName }}<br>
+                  {{ this.bankAccount.maleParent.account }}
                 </span>
                 <div class="_bank_btn_area">
                   <div class="ui buttons">
-                    <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.maleMother)">
+                    <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.maleParent.account)">
                       <i class="copy icon"></i>
                       복사
                     </button>
@@ -65,14 +65,14 @@
           <tbody>
           <tr>
             <td class="six wide left aligned">
-              <p>신부 - <strong>김규빈</strong></p>
+              <p>신부 - <strong>{{ this.bankAccount.female.name  }}</strong></p>
               <span class="_bank_info">
-                기업은행<br>
-                {{ this.bankAccount.female  }}
+                {{ this.bankAccount.female.bankName  }}<br>
+                {{ this.bankAccount.female.account  }}
               </span>
               <div class="_bank_btn_area">
                 <div class="ui buttons">
-                  <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.female)">
+                  <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.female.account)">
                     <i class="copy icon"></i>
                     복사
                   </button>
@@ -85,14 +85,14 @@
           </tr>
           <tr>
             <td class="left aligned">
-              <p>신부 혼주 - <strong>송인숙</strong></p>
+              <p>신부 혼주 - <strong>{{ this.bankAccount.femaleParent.name }}</strong></p>
                 <span class="_bank_info">
-                  농협<br>
-                  {{ this.bankAccount.femaleMother }}
+                  {{ this.bankAccount.femaleParent.bankName }}<br>
+                  {{ this.bankAccount.femaleParent.account }}
                 </span>
               <div class="_bank_btn_area">
                 <div class="ui buttons">
-                  <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.femaleMother)">
+                  <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.femaleParent.account)">
                     <i class="copy icon"></i>
                     복사
                   </button>
@@ -145,11 +145,26 @@ export default {
       showMaleContent: false,
       showFemaleContent: false,
       bankAccount: {
-        male : "99270132461",
-        maleMother: "59220201669901",
-        female: "53902218301017",
-        femaleMother: "21105152369181",
-        femaleFather: "21105152369181",
+        male : {
+          name: "XXX",
+          bankName: "국민은행",
+          account: "123456789"
+        },
+        maleParent: {
+          name: "XXX",
+          bankName: "국민은행",
+          account: "123456789"
+        },
+        female: {
+          name: "XXX",
+          bankName: "국민은행",
+          account: "123456789"
+        },
+        femaleParent: {
+          name: "XXX",
+          bankName: "국민은행",
+          account: "123456789"
+        }
       },
       kakaoPay: {
         male : "https://qr.kakaopay.com/FUI1VLcBZ",

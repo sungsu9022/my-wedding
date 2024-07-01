@@ -8,7 +8,7 @@
     </div>
 
     <div class="address_area _large_text _gray">
-      서울시 강남구 영동대로 325<br>
+      {{  address }}<br>
       S TOWER B1층 노블발렌티 대치점<br>
       <p>T. 02-539-0400</p>
     </div>

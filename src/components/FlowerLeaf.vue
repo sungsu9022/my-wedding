@@ -34,7 +34,7 @@ export default {
     },
     imageUrl() {
       const imageNumber = Math.floor(Math.random() * (6 - 1) + 1);
-      return `/my-wedding/floral-leaf/floral-leaf-${imageNumber}.png`;
+      return `/wedding/floral-leaf/floral-leaf-${imageNumber}.png`;
     },
   },
   data() {
