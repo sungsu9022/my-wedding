@@ -1,52 +1,51 @@
 <template>
-  <div class="c-account _center_aligned">
+  <div class="c-account _wrap">
     <div class="ui styled accordion" ref="accordion">
-      <div class="title"
+      <div class="title _title_area _small_text"
            :class="maleActive"
            @click="toggleArea($event, 'MALE')"
       >
-        <i class="dropdown icon"></i>
         신랑측 계좌번호
+        <i v-show="maleActive" class="chevron up icon"></i>
+        <i v-show="!maleActive" class="chevron right icon"></i>
       </div>
       <div class="content" :class="maleActive">
         <table class="ui basic table">
           <tbody>
             <tr>
               <td class="six wide left aligned">
-                <span>
-                  <span class="bank">국민은행 </span>
-                  <span>{{ this.bankAccount.male  }}</span>
+                <p>신랑 - <strong>{{ this.bankAccount.male.name  }}</strong></p>
+                <span class="_bank_info">
+                  {{ this.bankAccount.male.bankName  }}<br>
+                  {{ this.bankAccount.male.account  }}
                 </span>
-                <br />
-                <span>신랑 - 박성수</span>
-              </td>
-              <td class="ten wide right aligned">
-                <div class="ui buttons">
-                <button class="ui mini icon button" @click="copyBankAccount($event, this.bankAccount.male)">
-                  <i class="copy icon"></i>
-                  복사
-                </button>
-                <button class="ui mini yellow button" @click="moveKakaoPay($event, this.kakaoPay.male)">
-                  <img class="ui mini image" src="~@/assets/images/kakaopay-btn.png">
-                </button>
+                <div class="_bank_btn_area">
+                  <div class="ui buttons">
+                    <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.male.account)">
+                      <i class="copy icon"></i>
+                      복사
+                    </button>
+                    <button class="ui mini button _kakaopay_btn"  @click="moveKakaoPay($event, this.kakaoPay.male)">
+                      <img class="ui mini image" src="~@/assets/images/kakaopay-btn.png">
+                    </button>
+                  </div>
                 </div>
               </td>
             </tr>
             <tr>
               <td class="left aligned">
-                <span>
-                  <span class="bank">국민은행 </span>
-                  <span>{{ this.bankAccount.maleMother }}</span>
+                <p>신랑 혼주 - <strong>{{ this.bankAccount.maleParent.name  }}</strong></p>
+                <span class="_bank_info">
+                  {{ this.bankAccount.maleParent.bankName }}<br>
+                  {{ this.bankAccount.maleParent.account }}
                 </span>
-                <br />
-                <span>신랑 혼주 - 신미애</span>
-              </td>
-              <td class="right aligned">
-                <div class="ui buttons">
-                  <button class="ui mini icon button" @click="copyBankAccount($event, this.bankAccount.maleMother)">
-                    <i class="copy icon"></i>
-                    복사
-                  </button>
+                <div class="_bank_btn_area">
+                  <div class="ui buttons">
+                    <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.maleParent.account)">
+                      <i class="copy icon"></i>
+                      복사
+                    </button>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -54,51 +53,50 @@
         </table>
       </div>
 
-      <div class="title"
+      <div class="title _title_area _small_text"
            :class="femaleActive"
            @click="toggleArea($event, 'FEMALE')">
-        <i class="dropdown icon"></i>
         신부측 계좌번호
+        <i v-show="femaleActive" class="chevron up icon"></i>
+        <i v-show="!femaleActive" class="chevron right icon"></i>
       </div>
       <div class="content" :class="femaleActive">
-        <table class="ui basic table">
+        <table class="ui basic table _tiny_text">
           <tbody>
           <tr>
             <td class="six wide left aligned">
-                <span>
-                  <span class="bank">기업은행 </span>
-                  <span>{{ this.bankAccount.male  }}</span>
-                </span>
-              <br />
-              <span>신부 - 김규빈</span>
-            </td>
-            <td class="ten wide right aligned">
-              <div class="ui buttons">
-                <button class="ui mini icon button" @click="copyBankAccount($event, this.bankAccount.female)">
-                  <i class="copy icon"></i>
-                  복사
-                </button>
-                <button class="ui mini yellow button" @click="moveKakaoPay($event, this.kakaoPay.female)">
-                  <img class="ui mini image" src="~@/assets/images/kakaopay-btn.png">
-                </button>
+              <p>신부 - <strong>{{ this.bankAccount.female.name  }}</strong></p>
+              <span class="_bank_info">
+                {{ this.bankAccount.female.bankName  }}<br>
+                {{ this.bankAccount.female.account  }}
+              </span>
+              <div class="_bank_btn_area">
+                <div class="ui buttons">
+                  <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.female.account)">
+                    <i class="copy icon"></i>
+                    복사
+                  </button>
+                  <button class="ui mini button _kakaopay_btn" @click="moveKakaoPay($event, this.kakaoPay.female)">
+                    <img class="ui mini image" src="~@/assets/images/kakaopay-btn.png">
+                  </button>
+                </div>
               </div>
             </td>
           </tr>
           <tr>
             <td class="left aligned">
-                <span>
-                  <span class="bank">농협 </span>
-                  <span>{{ this.bankAccount.femaleMother }}</span>
+              <p>신부 혼주 - <strong>{{ this.bankAccount.femaleParent.name }}</strong></p>
+                <span class="_bank_info">
+                  {{ this.bankAccount.femaleParent.bankName }}<br>
+                  {{ this.bankAccount.femaleParent.account }}
                 </span>
-              <br />
-              <span>신부 혼주 - 송인숙</span>
-            </td>
-            <td class="right aligned">
-              <div class="ui buttons">
-                <button class="ui mini icon button" @click="copyBankAccount($event, this.bankAccount.femaleMother)">
-                  <i class="copy icon"></i>
-                  복사
-                </button>
+              <div class="_bank_btn_area">
+                <div class="ui buttons">
+                  <button class="ui mini icon button _copy_btn" @click="copyBankAccount($event, this.bankAccount.femaleParent.account)">
+                    <i class="copy icon"></i>
+                    복사
+                  </button>
+                </div>
               </div>
             </td>
           </tr>
@@ -147,11 +145,26 @@ export default {
       showMaleContent: false,
       showFemaleContent: false,
       bankAccount: {
-        male : "99270132461",
-        maleMother: "59220201669901",
-        female: "53902218301017",
-        femaleMother: "21105152369181",
-        femaleFather: "21105152369181",
+        male : {
+          name: "XXX",
+          bankName: "국민은행",
+          account: "123456789"
+        },
+        maleParent: {
+          name: "XXX",
+          bankName: "국민은행",
+          account: "123456789"
+        },
+        female: {
+          name: "XXX",
+          bankName: "국민은행",
+          account: "123456789"
+        },
+        femaleParent: {
+          name: "XXX",
+          bankName: "국민은행",
+          account: "123456789"
+        }
       },
       kakaoPay: {
         male : "https://qr.kakaopay.com/FUI1VLcBZ",
@@ -187,10 +200,27 @@ export default {
 </script>
 
 <style scoped lang="scss">
-._center_aligned {
+._wrap {
   text-align: -webkit-center;
   padding-left: 50px;
   padding-right: 50px;
+  font-size: 14px;
+  p {
+    line-height: 24px;
+    color: #797979;
+  }
+  strong {
+    color: #333333;
+  }
+  span {
+    line-height: 22px;
+    color: #797979;
+  }
+  ._bank_info {
+    margin-top: 5px;
+    color: #797979;
+  }
+
 }
 
 .bank {
@@ -205,6 +235,25 @@ export default {
   background-color: #4d7846!important;
   opacity: 0.9!important;
   color: white!important;
+}
+
+._title_area {
+  line-height: 28px;
+}
+
+._bank_btn_area {
+  text-align: right;
+}
+
+._kakaopay_btn {
+  background-color: #FFEC44!important;
+  width: 60px!important;
+}
+
+._copy_btn {
+  background-color: #FCFAF7!important;
+  width: 60px!important;
+  margin-right: 5px!important;
 }
 
 @media (max-width:340px){

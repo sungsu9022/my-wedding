@@ -6,7 +6,7 @@ import 'aos/dist/aos.css'
 import 'fomantic-ui-css/semantic.min.css'
 import VueDisqus from 'vue-disqus'
 import VueClipboard from 'vue-clipboard2'
-import 'viewerjs/dist/viewer.css'
+// import 'viewerjs/dist/viewer.css'
 import Viewer from 'v-viewer'
 
 
